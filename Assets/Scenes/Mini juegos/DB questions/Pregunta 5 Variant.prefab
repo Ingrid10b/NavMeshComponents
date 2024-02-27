@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2844011630854657656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 730826153536153102, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_Name
+      value: Pregunta 5 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: text
+      value: 'Un RBT debe cumplir con los siguientes invariantes:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[0].text
+      value: "El \xE1rbol debe tener altura logar\xEDtmica"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[1].text
+      value: Todos los invariantes definidos para BST
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[1].correct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[2].text
+      value: Las hojas son siempre rojos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[2].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[3].text
+      value: Los nodos rojos tienen hijos rojos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[3].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844620810972821278, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: opcion.Array.data[0].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4873068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20765494
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.89239
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646667110229451409, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 653d5b871288663408c61ccb5d6c0f85, type: 3}

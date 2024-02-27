@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &929264278468170674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4873068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20765494
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.89239
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901379392286691544, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: text
+      value: "En Haskell, \xBFQu\xE9 se entiende por \"currying\"?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[0].text
+      value: ' Comer curry mientras programas'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[0].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[2].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[1].text
+      value: "La t\xE9cnica de transformar una funci\xF3n de varios argumentos en
+        una secuencia de funciones de un solo argumento"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[2].text
+      value: "El proceso de depurar c\xF3digo Haskell"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[3].text
+      value: "Una forma de escribir comentarios en el c\xF3digo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983148328218215767, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: opcion.Array.data[1].correct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816095067468649543, guid: 6baca2e31926fc84082d284328b6adab, type: 3}
+      propertyPath: m_Name
+      value: Pregunta 10 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6baca2e31926fc84082d284328b6adab, type: 3}

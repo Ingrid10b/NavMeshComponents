@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6027614613741051261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4873068
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20765494
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.89239
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149019016959248304, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: text
+      value: "\xBFQu\xE9 hace la funci\xF3n map en Haskell?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[0].text
+      value: "Aplica una funci\xF3n a cada elemento de una lista"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[1].text
+      value: Combina dos listas en una
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[2].text
+      value: Filtra los elementos de una lista
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[3].text
+      value: Elimina elementos duplicados de una lista
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[0].correct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725511943422612031, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: opcion.Array.data[1].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073868289848869679, guid: a0f78f6ab48e6b74994438796659373a, type: 3}
+      propertyPath: m_Name
+      value: Pregunta 8 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0f78f6ab48e6b74994438796659373a, type: 3}

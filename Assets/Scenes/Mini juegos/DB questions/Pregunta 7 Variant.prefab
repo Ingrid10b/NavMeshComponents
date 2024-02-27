@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4259219548198153121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4873068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20765494
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.89239
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110279705744272401, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426817159201532046, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: m_Name
+      value: Pregunta 7 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: text
+      value: "\xBFCu\xE1l es la funci\xF3n utilizada para unir dos listas en Haskell?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[0].text
+      value: Merge
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[0].correct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[1].text
+      value: Concat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[1].correct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[2].text
+      value: Join
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371857018029226398, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}
+      propertyPath: opcion.Array.data[3].text
+      value: Combine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1e1a4daf9e14c254abc592df9e7848ef, type: 3}

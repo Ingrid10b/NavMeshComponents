@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+
+//El código simula un ciclo de día y noche en Unity. Utiliza una variable de tiempo para controlar el avance del día, ajusta la posición de una luz para simular el sol y notifica cambios de estado mediante eventos. 
+
 public class CicloDiaNoche : MonoBehaviour
 {
     // Variables públicas para ajustar el tiempo en minutos y la velocidad del ciclo día-noche

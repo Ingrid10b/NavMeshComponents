@@ -22,19 +22,19 @@ public class Item : MonoBehaviour
     public GameObject weaponManager;
 
     public bool playersWeapon;
-    
+
 
     private void Start()
     {
-        weaponManager = GameObject.FindWithTag ("WeaponManager");
+        weaponManager = GameObject.FindWithTag("WeaponManager");
 
-        if(!playersWeapon)
+        if (!playersWeapon)
         {
             int allweapons = weaponManager.transform.childCount;
 
-            for(int i = 0; i < allweapons; i++)
+            for (int i = 0; i < allweapons; i++)
             {
-                if(weaponManager.transform.GetChild(i).gameObject.GetComponent<Item>().ID == ID)
+                if (weaponManager.transform.GetChild(i).gameObject.GetComponent<Item>().ID == ID)
                 {
                     weapon = weaponManager.transform.GetChild(i).gameObject;
                 }
@@ -43,34 +43,34 @@ public class Item : MonoBehaviour
     }
     private void Update()
     {
-        if(equipped)
+        if (equipped)
         {
-            if(Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.I))
             {
                 equipped = false;
             }
-            if(equipped == false)
+            if (equipped == false)
             {
                 gameObject.SetActive(false);
             }
         }
     }
 
-    public void ActivarArma()
-    {
-        gameObject.SetActive(true);
-    }
+
     public void ItemUsage()
     {
-        if(type == "Weapon")
+
+        if (equipped)
+        {
+            Debug.Log("Ya tienes un item activo.");
+            return;
+        }
+
+
+        if (type == "Weapon")
         {
             weapon.SetActive(true);
-
             weapon.GetComponent<Item>().equipped = true;
         }
     }
-
-
-
-
 }

@@ -175,9 +175,10 @@ GameObject:
   - component: {fileID: 3990543709807049176}
   - component: {fileID: 4039467985983573235}
   - component: {fileID: 1213242271249482218}
+  - component: {fileID: -6005454327588186616}
   m_Layer: 0
   m_Name: Espada 1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,6 +259,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6005454327588186616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049052347963714233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb443a28c915d6f40bcb0dafe6bbd9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 3
+  type: Weapon
+  descripcion: Espada
+  icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  pickedUp: 0
+  equipped: 0
+  weapon: {fileID: 0}
+  weaponManager: {fileID: 0}
+  playersWeapon: 0
 --- !u!1 &7020703552081977233
 GameObject:
   m_ObjectHideFlags: 0

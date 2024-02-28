@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Cofre
   - floor
+  - Item
+  - WeaponManager
   layers:
   - Default
   - TransparentFX

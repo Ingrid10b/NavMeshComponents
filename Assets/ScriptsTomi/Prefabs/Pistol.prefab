@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 876055525905364831}
   - component: {fileID: 4289542643841792250}
   - component: {fileID: 2045605131084663856}
+  - component: {fileID: 5543155020014735093}
+  - component: {fileID: 8883517093451047365}
+  - component: {fileID: 1858183798012026562}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -83,6 +86,51 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5543155020014735093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532426923895893477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab40dd0c8ed533745a4bdea9cffa7ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cogerArmas: {fileID: 0}
+  numeroArma: 2
+--- !u!114 &8883517093451047365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532426923895893477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3abe7054c1048c4b9e37a1de08434dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittableLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  bulletHolePrefab: {fileID: 8230712844279878013, guid: 9ca4541fc90725a448cf4c849603f528, type: 3}
+  danio: 10
+  fireRange: 200
+  recoilForce: 4
+--- !u!114 &1858183798012026562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532426923895893477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136d68d48a3128a42acf75569d34b6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438629232726943916
 GameObject:
   m_ObjectHideFlags: 0

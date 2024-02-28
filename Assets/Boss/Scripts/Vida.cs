@@ -31,9 +31,6 @@ public class Vida : MonoBehaviour
         currentHealth -= damage;
 
 
-        SliderVida.value = currentHealth /100;
-
-
 
         if (currentHealth <= 0) 
         {

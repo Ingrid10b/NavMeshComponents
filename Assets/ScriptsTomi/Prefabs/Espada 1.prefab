@@ -171,6 +171,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6393244101607616515}
+  - component: {fileID: 7627368651893046504}
+  - component: {fileID: 3990543709807049176}
+  - component: {fileID: 4039467985983573235}
+  - component: {fileID: 1213242271249482218}
   m_Layer: 0
   m_Name: Espada 1
   m_TagString: Untagged
@@ -196,6 +200,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 63.118, y: -37.846, z: 0}
+--- !u!65 &7627368651893046504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049052347963714233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1297324, y: 0.029468756, z: 0.6147118}
+  m_Center: {x: 0.017303787, y: 0.00796789, z: 0.006462902}
+--- !u!114 &3990543709807049176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049052347963714233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab40dd0c8ed533745a4bdea9cffa7ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cogerArmas: {fileID: 0}
+  numeroArma: 2
+--- !u!114 &4039467985983573235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049052347963714233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef18a7de05d9d34582a1190edfd2999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1213242271249482218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049052347963714233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdcac5a2fc5e82044a481973bb2580ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7020703552081977233
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +350,8 @@ GameObject:
   - component: {fileID: 1852598119833433106}
   - component: {fileID: 8113174663192355307}
   - component: {fileID: 5690164696608744299}
+  - component: {fileID: 3570234314049996552}
+  - component: {fileID: 4588221577355992892}
   m_Layer: 0
   m_Name: Lame
   m_TagString: Untagged
@@ -358,3 +422,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3570234314049996552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088855806930114343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07353578, y: 0.42581907, z: 0.011838627}
+  m_Center: {x: -0.0000000013484661, y: 0.09049359, z: 0.0000009536743}
+--- !u!114 &4588221577355992892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088855806930114343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2ceaed765f61b438825e11a8e05386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  danioArma: 10
+  cooldown: 1
+  ultimoAtaque: 0

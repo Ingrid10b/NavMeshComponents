@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject EnemyPrefab;
+    public GameObject playerObject;
     public GameObject[] spawnPoints;
     public int maxEnemies = 100;
     private bool spawning;
     private bool noche = false;
-    public float spawnInterval = 5.0f;
+    public float spawnInterval = 15.0f;
     public int countEnemys = 0;
     private CicloDiaNoche lunaLight; // Referencia al componente CicloDiaNoche 
 
@@ -31,13 +32,13 @@ public class SpawnManager : MonoBehaviour
         // Suscribirse al evento OnMiVariableChanged del CicloDiaNoche.
         lunaLight.OnMiVariableChanged += HandleMiVariableChanged;
 
-        Invoke("EsperarYActivar", 10f);
+        Invoke("EsperarYActivar", 15f);
     }
 
     void HandleMiVariableChanged(bool nuevoValor)
     {
         noche = nuevoValor;
-        //Debug.Log(nuevoValor + "nuevoValor");
+        Debug.Log(nuevoValor + "nuevoValor");
     }
 
     void OnDestroy()
@@ -72,21 +73,46 @@ public class SpawnManager : MonoBehaviour
             Debug.LogWarning("No hay puntos de spawn configurados.");
             return;
         }
-
         if (maxEnemies != 0 && noche == true)
         {
+            // Inicializamos algunas variables para realizar el seguimiento del punto de aparición más cercano
+            Transform playerTransform = playerObject.transform; // Suponiendo que playerObject es la referencia al objeto del jugador
+            Transform closestSpawnPoint = null;
+            float closestDistance = Mathf.Infinity;
 
-            int spawnPos = Random.Range(0, spawnPoints.Length);
-            GameObject enemyInstance = Instantiate(EnemyPrefab, spawnPoints[spawnPos].transform.position, spawnPoints[spawnPos].transform.rotation);
-            spawnedEnemies.Add(enemyInstance);
-            maxEnemies--;
-            countEnemys++;
+            // Iteramos a través de todos los objetos en la lista spawnPoints
+            foreach (GameObject spawnPointObject in spawnPoints)
+            {
+                // Obtener el componente Transform del objeto de spawnPointObject
+                Transform spawnPoint = spawnPointObject.transform;
+
+                // Calculamos la distancia entre el punto de aparición actual y el jugador
+                float distanceToPlayer = Vector3.Distance(spawnPoint.position, playerTransform.position);
+
+                // Si esta distancia es menor que la distancia más cercana encontrada hasta ahora
+                if (distanceToPlayer < closestDistance)
+                {
+                    // Actualizamos la distancia más cercana y el punto de aparición más cercano
+                    closestDistance = distanceToPlayer;
+                    closestSpawnPoint = spawnPoint;
+                }
+            }
+
+            // Una vez que hayamos encontrado el punto de aparición más cercano, lo utilizamos para instanciar el enemigo
+            if (closestSpawnPoint != null)
+            {
+                GameObject enemyInstance = Instantiate(EnemyPrefab, closestSpawnPoint.position, closestSpawnPoint.rotation);
+                spawnedEnemies.Add(enemyInstance);
+                maxEnemies--;
+                countEnemys++;
+            }
         }
+
         else if (noche == false && countEnemys > 0)
         {
             foreach (var enemy in spawnedEnemies)
             {
-               // Destroy(enemy);
+               Destroy(enemy);
             }
             spawnedEnemies.Clear(); // Limpiar la lista
             countEnemys = 0;

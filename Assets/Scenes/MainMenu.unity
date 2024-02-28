@@ -6587,8 +6587,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 6160977512589240621, guid: 72c88f828ffad6748813838dea787b2c, type: 3}
+  playerObject: {fileID: 1363051855}
   spawnPoints:
   - {fileID: 278066726}
+  - {fileID: 1048382142}
+  - {fileID: 952352506}
+  - {fileID: 2037268192}
+  - {fileID: 1165209770}
   maxEnemies: 100
   spawnInterval: 5
   countEnemys: 0
@@ -6728,7 +6733,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6804,10 +6809,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minutos: 0
-  grados: 0
-  TimeSpeed: 10
-  lunaLight: {fileID: 0}
-  night: 0
+  velocidad: 10
+  luzSol: {fileID: 2049831406}
+  esDeNoche: 0
+  esDeNocheAnterior: 0
 --- !u!114 &2049831409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6815,7 +6820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049831405}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44bc38e78dc45194d8f92084b842a7ad, type: 3}
   m_Name: 

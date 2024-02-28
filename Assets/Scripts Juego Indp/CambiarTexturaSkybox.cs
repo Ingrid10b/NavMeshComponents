@@ -11,7 +11,7 @@ public class CambiarTexturaSkybox : MonoBehaviour
     {
         cicloDiaNoche = GetComponent<CicloDiaNoche>(); // Obteniendo referencia al script CicloDiaNoche
         // Suscribiéndose al evento para saber cuándo cambia entre día y noche
-        if (cicloDiaNoche.night == true)
+        if (cicloDiaNoche.esDeNoche == true)
         {
             RenderSettings.skybox = skyboxNight; // Cambiar el skybox a la noche
         } else

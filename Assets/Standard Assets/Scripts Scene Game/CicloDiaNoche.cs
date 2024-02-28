@@ -1,55 +1,73 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CicloDiaNoche : MonoBehaviour
 {
-    public float minutos, grados;
-    public float TimeSpeed = 50;
-    public Light lunaLight;
-    public bool night = false;
+    public float minutos;
+    public float velocidad = 10f;
 
+    public Light luzSol;
 
-    // Declarar un evento que notificará a otros scripts cuando la variable cambie.
+    public bool esDeNoche = false;
+    public bool esDeNocheAnterior = false;
+
     public event System.Action<bool> OnMiVariableChanged;
 
     void Update()
     {
-        minutos += TimeSpeed * Time.deltaTime;
+        minutos += Time.deltaTime * velocidad;
+
         if (minutos >= 1440)
         {
             minutos = 0;
         }
-        grados = minutos / 4;
-        this.transform.localEulerAngles = new Vector3(grados, 90f, 0);
 
-        // Determinar si es de noche o de día.
-        // bool isNight = grados >= 250 ;
-        bool isDay = grados <= 250 && grados > 100;
-        //  bool isMorning = grados < 100;
+        float fraccionDelDia = minutos / 1440f;
 
-        if (isDay == true)
+        if (fraccionDelDia >= 0.45f && fraccionDelDia <= 1f)
         {
-            night = false;
-            CambiarMiVariable(night);
-            Debug.Log(night + "Chau");
+            esDeNoche = true;
+
+            if (!esDeNocheAnterior)
+            {
+                Debug.Log("Noche");
+                CambiarMiVariable(esDeNoche);
+            }
+
+            esDeNocheAnterior = true;
+
 
         }
         else
         {
-            night = true;
-            CambiarMiVariable(night);
-            Debug.Log(night + "ma;ana");
 
+            esDeNoche = false;
+
+            if (esDeNocheAnterior)
+            {
+                Debug.Log("Día");
+                CambiarMiVariable(esDeNoche);
+
+            }
+
+            esDeNocheAnterior = false;
         }
+
+
+        if (luzSol != null)
+        {
+            luzSol.transform.rotation = Quaternion.Euler(360f * fraccionDelDia, 170f, 0);
+        }
+
     }
 
     public void CambiarMiVariable(bool nuevoValor)
+
     {
+
         // Llamar al evento cuando la variable cambie.
-        if (OnMiVariableChanged != null)
-        {
-            OnMiVariableChanged(nuevoValor);
-        }
+
+        OnMiVariableChanged?.Invoke(nuevoValor);
+
     }
+
 }

@@ -21,7 +21,7 @@ public class Linterna : MonoBehaviour
             {
                 LuzLinterna.enabled = false;
             }
-            else if (LuzLinterna.enabled == false && EnergiaActual > 10)
+            else if (LuzLinterna.enabled == false && EnergiaActual > 20)
             {
                 LuzLinterna.enabled = true;
             }
@@ -35,24 +35,44 @@ public class Linterna : MonoBehaviour
             {
                 EnergiaActual = 0;
                 LuzLinterna.enabled = false;
+                //mostrar canva sin bat
+
+            } 
+
+            if (EnergiaActual < 20)
+            {
+                // mostrar canva poca bat
+
+            } else
+            {
+                //ocultarlo
             }
+
         }
         else if (LuzLinterna.enabled == false)
         {
+            if ( EnergiaActual > 20)
+            {
+             //ocultar canva sin bat
+                
+            }
             EnergiaActual += Time.deltaTime * VelocidadRecarga;
 
             if (EnergiaActual > EnergiaMaxima)
             {
                 EnergiaActual = EnergiaMaxima;
             }
+
         }
 
-       // sliderBateria.value = EnergiaActual / EnergiaMaxima;
+       //sliderBateria.value = (EnergiaActual / EnergiaMaxima) / 100;
+
 
         // Si el slider llega al extremo opuesto, apaga la linterna
-        if (sliderBateria.value <= 0 || sliderBateria.value >= 1)
-        {
-            LuzLinterna.enabled = false;
-        }
+        //if (sliderBateria.value <= 0 || sliderBateria.value >= 1)
+        //{
+          //  LuzLinterna.enabled = false;
+            //mostrar canvas
+        //}
     }
 }

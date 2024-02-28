@@ -27,11 +27,11 @@ public class Vida : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
+        Debug.Log("hago daño");
         currentHealth -= damage;
 
 
-        SliderVida.value = currentHealth;
+        SliderVida.value = currentHealth /100;
 
 
 

@@ -23,7 +23,7 @@ public class CicloDiaNoche : MonoBehaviour
 
         float fraccionDelDia = minutos / 1440f;
 
-        if (fraccionDelDia >= 0.45f && fraccionDelDia <= 1f)
+        if (fraccionDelDia >= 0.50f && fraccionDelDia <= 1f)
         {
             esDeNoche = true;
 

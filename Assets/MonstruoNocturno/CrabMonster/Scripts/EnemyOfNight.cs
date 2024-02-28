@@ -76,6 +76,7 @@ public class EnemyOfNight : MonoBehaviour
             Vida playerHealth = player.GetComponent<Vida>();
             if (playerHealth != null && !enemyHealth.isDead)
             {
+                Debug.Log(damage);
 
                 playerHealth.TakeDamage(damage);
                 animator.SetTrigger("Attack_1");

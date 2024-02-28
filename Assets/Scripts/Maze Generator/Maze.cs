@@ -15,6 +15,9 @@ public class Maze : MonoBehaviour
     private GameObject g_manager;
     public Transform targetPosition;
 
+    public NavMeshSurface surface;
+
+
     [SerializeField]
     private bool toggle_visualization = true;
 
@@ -97,9 +100,8 @@ public class Maze : MonoBehaviour
         current_cell.visited = true;
 
         // Actualizar el NavMesh después de crear el laberinto
-        //UpdateNavMesh();
-        CalculatePathToTarget();
-        ///NavMesh.CalculatePath();
+        surface.BuildNavMesh();
+
     }
 
     private void CalculatePathToTarget()
@@ -290,9 +292,4 @@ public class Maze : MonoBehaviour
         }
     }
 
-   // private void UpdateNavMesh()
-    //{
-      //  var worldBounds = new Bounds(Vector3.zero, 1000 * Vector3.one);
-       // NavMeshBuilder.UpdateNavMeshData(worldBounds, navMeshSurface.navMeshData);
-   // }
 }

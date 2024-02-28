@@ -10,23 +10,21 @@ public class Linterna : MonoBehaviour
     [Header("Energia")]
     public float EnergiaActual = 100;
     public float EnergiaMaxima = 100;
-    public float VelocidadConsumo = 2; //Es la velocidad con la que se consume la energia actual
+    public float VelocidadConsumo = 2f; //Es la velocidad con la que se consume la energia actual
     public float VelocidadRecarga = 1; //Es la velocidad con la que se recarga la bateria (lo que tarda en recargarse)
 
-    //[Header("Interfaz")]
+    [Header("Interfaz")]
     public Image BarraBateria;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
     void Update()
+
     {
+
         //encender y apagar la linterna
         if (Input.GetButtonDown("Linterna")) // letra para encender o apagar
-            // si la linterna esta encendida con la letra f se apaga y viceversa
+        {
+            // si la linterna esta encendida con la letra c se apaga y viceversa
             if (LuzLinterna.enabled == true)
             {
                 LuzLinterna.enabled = false;
@@ -36,13 +34,14 @@ public class Linterna : MonoBehaviour
                 LuzLinterna.enabled = true;
 
             }
+        }
 
         if (LuzLinterna.enabled == true)
 
         {
             EnergiaActual -= Time.deltaTime * VelocidadConsumo; //la energia actual disminuye 1sgdos*2sgdos de consumo
 
-            if (EnergiaActual <= 0) //cuando llega a 0 se apaga
+            if (EnergiaActual < 0) //cuando llega a 0 se apaga
             {
                 EnergiaActual = 0; //limite de energia
                 LuzLinterna.enabled = false;

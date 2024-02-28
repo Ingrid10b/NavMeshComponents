@@ -10,10 +10,7 @@ public class EnemyOfTheNight : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Attack();
-        }
+        Attack();
     }
 
     void Attack()

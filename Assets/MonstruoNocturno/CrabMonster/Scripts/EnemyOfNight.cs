@@ -43,16 +43,16 @@ public class EnemyOfNight : MonoBehaviour
         if (player != null)
         {
             // Sigue al jugador.
-            //navMeshAgent.SetDestination(player.position);
+            navMeshAgent.SetDestination(player.position);
 
             if (Vector3.Distance(transform.position, player.position) <= navMeshAgent.stoppingDistance)
             {
                 // El enemigo ha alcanzado al jugador, atacar.
                 Attack();
-            } 
+            }
             else
             {
-               animator.SetTrigger("Walk_Cycle_1");
+                animator.SetTrigger("Walk_Cycle_1");
 
             }
         }
@@ -74,7 +74,7 @@ public class EnemyOfNight : MonoBehaviour
             vidaBoss enemyHealth = Enemy.GetComponent<vidaBoss>();
 
             Vida playerHealth = player.GetComponent<Vida>();
-            if (playerHealth != null && !enemyHealth.isDead )
+            if (playerHealth != null && !enemyHealth.isDead)
             {
 
                 playerHealth.TakeDamage(damage);
@@ -84,7 +84,7 @@ public class EnemyOfNight : MonoBehaviour
             }
         }
     }
-    
+
     private IEnumerator RestoreSpeedAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

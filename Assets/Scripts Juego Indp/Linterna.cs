@@ -1,65 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Linterna : MonoBehaviour
 {
     public Light LuzLinterna;
+    public Slider sliderBateria;
 
     [Header("Energia")]
     public float EnergiaActual = 100;
     public float EnergiaMaxima = 100;
-    public float VelocidadConsumo = 2f; //Es la velocidad con la que se consume la energia actual
-    public float VelocidadRecarga = 1; //Es la velocidad con la que se recarga la bateria (lo que tarda en recargarse)
-
-    [Header("Interfaz")]
-    public Image BarraBateria;
-
+    public float VelocidadConsumo = 2f; // Es la velocidad con la que se consume la energia actual
+    public float VelocidadRecarga = 1; // Es la velocidad con la que se recarga la bateria (lo que tarda en recargarse)
 
     void Update()
-
     {
-
-        //encender y apagar la linterna
-        if (Input.GetButtonDown("Linterna")) // letra para encender o apagar
+        // Encender y apagar la linterna
+        if (Input.GetButtonDown("Linterna"))
         {
-            // si la linterna esta encendida con la letra c se apaga y viceversa
             if (LuzLinterna.enabled == true)
             {
                 LuzLinterna.enabled = false;
             }
-            else if (LuzLinterna.enabled == false && EnergiaActual > 10) //EnergiaActual > 10 sirve para que la linterna se pueda encender cuando la energia actual se recargue a 10 antes no se puede encender
+            else if (LuzLinterna.enabled == false && EnergiaActual > 10)
             {
                 LuzLinterna.enabled = true;
-
             }
         }
 
         if (LuzLinterna.enabled == true)
-
         {
-            EnergiaActual -= Time.deltaTime * VelocidadConsumo; //la energia actual disminuye 1sgdos*2sgdos de consumo
+            EnergiaActual -= Time.deltaTime * VelocidadConsumo;
 
-            if (EnergiaActual < 0) //cuando llega a 0 se apaga
+            if (EnergiaActual < 0)
             {
-                EnergiaActual = 0; //limite de energia
+                EnergiaActual = 0;
                 LuzLinterna.enabled = false;
             }
         }
         else if (LuzLinterna.enabled == false)
-
         {
-            EnergiaActual += Time.deltaTime * VelocidadRecarga; // la energia se recarga por segundo
+            EnergiaActual += Time.deltaTime * VelocidadRecarga;
 
             if (EnergiaActual > EnergiaMaxima)
             {
-                EnergiaActual = EnergiaMaxima; // limite de recarga
+                EnergiaActual = EnergiaMaxima;
             }
         }
 
+       // sliderBateria.value = EnergiaActual / EnergiaMaxima;
 
-        BarraBateria.fillAmount = EnergiaActual / EnergiaMaxima;
-
+        // Si el slider llega al extremo opuesto, apaga la linterna
+        if (sliderBateria.value <= 0 || sliderBateria.value >= 1)
+        {
+            LuzLinterna.enabled = false;
+        }
     }
 }

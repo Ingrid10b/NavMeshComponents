@@ -24,7 +24,7 @@ public class DB : MonoBehaviour
     }
 
     // Este método devuelve una pregunta aleatoria de la lista de preguntas y la elimina de la lista si 'remove' es verdadero.
-    public preguntas preguntasRamdom(bool remove = true)
+    public preguntas preguntasRamdom()
     {
         // Si la lista de preguntas está vacía, se restaura desde la lista de respaldo.
         if (listaPreguntas.Count == 0)
@@ -38,16 +38,16 @@ public class DB : MonoBehaviour
         // Obtenemos la pregunta en el índice generado.
         preguntas q = listaPreguntas[index];
 
-        // Si 'remove' es verdadero, eliminamos la pregunta de la lista.
-        if (remove)
-            listaPreguntas.RemoveAt(index);
+        listaPreguntas.RemoveAt(index);
+
+        listaPreguntas.Remove(q);
 
         // Devolvemos la pregunta seleccionada.
         return q;
     }
 
     // Este método restaura la lista de preguntas desde la lista de respaldo.
-    private void RestaurarDB()
+    public void RestaurarDB()
     {
         listaPreguntas = backup.ToList();
     }

@@ -16,6 +16,7 @@ public class CogerArmas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(contarTiempo)
         {
             tiempoEscudo -= Time.deltaTime;
@@ -30,29 +31,37 @@ public class CogerArmas : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.X))
         {
-            DesactivarArmas();
+            ActivarArmas(0);
         }
     }
     public void ActivarArmas(int numero)
     {
-        for(int i = 0; i < armas.Length; i++)
+       if (numero >= 0 && numero < armas.Length && armas[numero] != null)
+    {
+        for (int i = 0; i < armas.Length; i++)
         {
-            armas[i].SetActive(false);
+            if (armas[i] != null)
+            {
+                armas[i].SetActive(false);
+            }
         }
-        if(numero == 1)
+        
+        if (numero == 1)
         {
-            contarTiempo=true;
+            contarTiempo = true;
         }
+        
         armas[numero].SetActive(true);
     }
-    
-    public void DesactivarArmas()
-    {
-        for(int i = 0; i < armas.Length; i++)
-        {
-            armas[i].SetActive(false);
-        }
-
     }
+
+   // public void DesactivarArmas()
+   // {
+     //   for(int i = 0; i < armas.Length; i++)
+      //  {
+        //    armas[i].SetActive(false);
+       // }
+
+   // }
 
 }

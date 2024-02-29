@@ -39,7 +39,7 @@ public class WeaponController : MonoBehaviour
             if (Physics.Raycast(cameraPlayerTransform.position, cameraPlayerTransform.forward, out hit, fireRange, hittableLayers))
             {
                 Debug.Log(hit.transform.name);
-                hit.transform.GetComponent<vidaBoss>().RecibirDanio(danio);
+              //          hit.transform.GetComponent<vidaBoss>().RecibirDanio(danio);
                 GameObject bulletHoleClone = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
                 Destroy(bulletHoleClone, 1f);
             }

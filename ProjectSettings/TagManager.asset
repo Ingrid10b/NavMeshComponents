@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Cofre
   - floor
+  - Espada
   layers:
   - Default
   - TransparentFX

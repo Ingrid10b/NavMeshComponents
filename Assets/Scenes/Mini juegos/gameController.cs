@@ -3,33 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-
 public class gameController : MonoBehaviour
 {
     [SerializeField] private Color correctColor = Color.black;
     [SerializeField] private Color incorrectColor = Color.black;
-    [SerializeField] private float tiempoEspera= 0.0f;
+    [SerializeField] private float tiempoEspera = 0.0f;
 
     private DB dataBases;
     private interaccion_cofre interaccion_Cofre;
     private QuizzUI UI;
     private bool uiInitialized = false;
-    public GameObject[] objetosAleatorios; // Lista de prefabs de los objetos a instanciar
-    public float offsetDerecha = 2.0f; // Desplazamiento hacia la derecha
+    public GameObject[] objetosAleatorios;
+    public float offsetDerecha = 2.0f;
     private PlayerMovement PlayerMovement;
-
     public GameObject posicionObjeto;
 
-    //empieza el juego
     void Start()
     {
         dataBases = GameObject.FindObjectOfType<DB>();
         interaccion_Cofre = FindObjectOfType<interaccion_cofre>();
         PlayerMovement = FindObjectOfType<PlayerMovement>();
-
     }
-
-
 
     private void InitializeUI()
     {
@@ -40,7 +34,6 @@ public class gameController : MonoBehaviour
             SiguientePreg();
         }
     }
-
 
     //funcion constructora/operadora de la UI
     private void SiguientePreg()
@@ -56,54 +49,40 @@ public class gameController : MonoBehaviour
         StartCoroutine(CortinaEntrePregs(opB));
     }
 
-    //cambar el color dependiendo si es correcta o no, esperar tiempo p/ cambiar a nueva preg
-    private IEnumerator CortinaEntrePregs(optionButton opB) 
+    private IEnumerator CortinaEntrePregs(optionButton opB)
     {
         if (opB.opciones.correct)
         {
-            opB.SetColor(correctColor);    
+            opB.SetColor(correctColor);
+            UI.Reset();
+            dataBases.RestaurarDB();
+            SiguientePreg();
+
             yield return new WaitForSeconds(tiempoEspera);
-
-            //instanciamos objetos aleatorios
             InstanciarObjetoAleatorio();
-            
-            //verificamos que no se sigan instanciando objetos
             interaccion_Cofre.instanciarObejeto = true;
-
             UI.ReanudarJuego();
-
         }
         else
         {
             opB.SetColor(incorrectColor);
+            UI.Reset();
+            dataBases.RestaurarDB();
+            SiguientePreg();
 
-            // Desactivar la UI después de un tiempo de espera
-            if (UI != null)
-            {
-                UI.ReanudarJuego();
-
-            }
-
+            yield return new WaitForSeconds(tiempoEspera);
+            PlayerMovement.camaraOff = false;
+            UI.ReanudarJuego();
         }
-
     }
 
     private void InstanciarObjetoAleatorio()
     {
-
-        // Generar un índice aleatorio dentro del rango de la lista
         int indiceAleatorio = Random.Range(0, objetosAleatorios.Length);
-
-        // Obtener el prefab correspondiente al índice aleatorio
         GameObject objetoAleatorio = objetosAleatorios[indiceAleatorio];
-
-        // Instanciar el objeto en una posición y rotación arbitrarias
-
-        Instantiate(objetoAleatorio, posicionObjeto.transform.position , Quaternion.identity);
-
+        Instantiate(objetoAleatorio, posicionObjeto.transform.position, Quaternion.identity);
         PlayerMovement.camaraOff = false;
     }
-
 
     public void ActivarMiniJuego()
     {
@@ -112,5 +91,4 @@ public class gameController : MonoBehaviour
             InitializeUI();
         }
     }
-
 }

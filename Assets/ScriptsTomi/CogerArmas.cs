@@ -8,6 +8,8 @@ public class CogerArmas : MonoBehaviour
     public GameObject[] armas;
     public float tiempoEscudo = 10.0f;
     public bool contarTiempo = false;
+    public bool armaActiva = false;
+
     void Start()
     {
         
@@ -31,7 +33,13 @@ public class CogerArmas : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.X))
         {
-            ActivarArmas(0);
+            if (armaActiva == true)
+            {
+                DesactivarArmas();
+            } else
+            {
+                ActivarArmas(0);
+            }
         }
     }
     public void ActivarArmas(int numero)
@@ -52,16 +60,20 @@ public class CogerArmas : MonoBehaviour
         }
         
         armas[numero].SetActive(true);
-    }
+        armaActiva = true;
+
+        }
     }
 
-   // public void DesactivarArmas()
-   // {
-     //   for(int i = 0; i < armas.Length; i++)
-      //  {
-        //    armas[i].SetActive(false);
-       // }
+   public void DesactivarArmas()
+    {
 
-   // }
+        for(int i = 0; i < armas.Length; i++)
+        {
+            armaActiva = false;
+            armas[i].SetActive(false);
+        }
+
+    }
 
 }

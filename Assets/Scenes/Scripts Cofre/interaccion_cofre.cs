@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class interaccion_cofre : MonoBehaviour
 {
@@ -8,12 +6,21 @@ public class interaccion_cofre : MonoBehaviour
     public float distancia = 1.5f;
     public GameObject ultimoReconocido = null;
     private PlayerMovement PlayerMovement;
+    private gameController GameController; // Agrega una referencia al gameController
 
     public bool instanciarObejeto = false;
+
     void Start()
     {
         mask = LayerMask.GetMask("Deteccion");
         PlayerMovement = FindObjectOfType<PlayerMovement>();
+        GameController = FindObjectOfType<gameController>(); // Encuentra el gameController
+    }
+
+    void SelectedObject(Transform transform)
+    {
+        transform.GetComponent<MeshRenderer>().material.color = Color.green;
+        ultimoReconocido = transform.gameObject;
     }
 
     void Update()
@@ -29,8 +36,8 @@ public class interaccion_cofre : MonoBehaviour
                 {
                     PlayerMovement.camaraOff = true;
                     hit.collider.transform.GetComponent<Cofre>().activarCofre();
-                    Destroy(ultimoReconocido);
-
+                    GameController.SetSelectedCofre(hit.collider.gameObject, hit.collider.transform.position); // Llama al método en gameController para informar sobre el cofre seleccionado
+                    hit.collider.gameObject.SetActive(false);
                 }
             }
         }
@@ -39,19 +46,17 @@ public class interaccion_cofre : MonoBehaviour
             deselect();
         }
     }
-    void SelectedObject(Transform transform)
-    {
-        transform.GetComponent<MeshRenderer>().material.color = Color.green;
-        ultimoReconocido = transform.gameObject;
-
-    }
     void deselect()
     {
-        if(ultimoReconocido)
+        if (ultimoReconocido)
         {
             ultimoReconocido.GetComponent<Renderer>().material.color = Color.white;
             ultimoReconocido = null;
         }
     }
-
 }
+
+
+
+
+

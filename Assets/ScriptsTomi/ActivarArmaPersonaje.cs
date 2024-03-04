@@ -23,7 +23,7 @@ public class ActivarArmaPersonaje : MonoBehaviour
         if(other.tag == "Player")
         {
             cogerArmas.ActivarArmas(numeroArma);
-           // Destroy(gameObject);
+           Destroy(gameObject);
         }
     }
 }

@@ -16,7 +16,17 @@ public class gameController : MonoBehaviour
     public GameObject[] objetosAleatorios;
     public float offsetDerecha = 2.0f;
     private PlayerMovement PlayerMovement;
-    public GameObject posicionObjeto;
+
+    private GameObject selectedCofre;
+    private Vector3 selectedCofrePosition;
+
+
+
+    // Método para recibir el cofre seleccionado desde interaccion_cofre
+    public void SetSelectedCofre(GameObject cofre)
+    {
+        selectedCofre = cofre;
+    }
 
     void Start()
     {
@@ -75,20 +85,28 @@ public class gameController : MonoBehaviour
             UI.ReanudarJuego();
         }
     }
+    public void SetSelectedCofre(GameObject cofre, Vector3 cofrePosition)
+    {
+        selectedCofre = cofre;
+        selectedCofrePosition = cofrePosition;
+    }
+
 
     private void InstanciarObjetoAleatorio()
     {
-        int indiceAleatorio = Random.Range(0, objetosAleatorios.Length);
-        GameObject objetoAleatorio = objetosAleatorios[indiceAleatorio];
-        Instantiate(objetoAleatorio, posicionObjeto.transform.position, Quaternion.identity);
-        PlayerMovement.camaraOff = false;
-    }
-
-    public void ActivarMiniJuego()
-    {
-        if (!uiInitialized)
+        if (selectedCofre != null)
         {
-            InitializeUI();
+            int indiceAleatorio = Random.Range(0, objetosAleatorios.Length);
+            GameObject objetoAleatorio = objetosAleatorios[indiceAleatorio];
+            Instantiate(objetoAleatorio, selectedCofrePosition, Quaternion.identity);
+            PlayerMovement.camaraOff = false;
         }
     }
-}
+    public void ActivarMiniJuego()
+        {
+            if (!uiInitialized)
+            {
+                InitializeUI();
+            }
+        }
+    }

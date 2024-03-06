@@ -2530,6 +2530,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815937764}
   m_CullTransparentMesh: 0
+--- !u!1 &851775057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6049052347963714233, guid: 4ce4648dfea22fb43bc131d3254d8d6b, type: 3}
+  m_PrefabInstance: {fileID: 1761336871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &855656909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4588,8 +4593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armas:
-  - {fileID: 1878849005}
-  - {fileID: 532426923895893477, guid: 507449b5b0868c7429ee2f6192b953b5, type: 3}
+  - {fileID: 851775057}
   tiempoEscudo: 10
   contarTiempo: 0
   armaActiva: 0
@@ -5558,7 +5562,6 @@ MonoBehaviour:
   tiempoEspera: 0
   objetosAleatorios:
   - {fileID: 6049052347963714233, guid: 4ce4648dfea22fb43bc131d3254d8d6b, type: 3}
-  - {fileID: 532426923895893477, guid: 507449b5b0868c7429ee2f6192b953b5, type: 3}
   offsetDerecha: 2
 --- !u!124 &1513980054
 Behaviour:
@@ -7426,7 +7429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2136624929
 Transform:
   m_ObjectHideFlags: 0

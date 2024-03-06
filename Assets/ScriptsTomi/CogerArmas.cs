@@ -4,76 +4,57 @@ using UnityEngine;
 
 public class CogerArmas : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject[] armas;
     public float tiempoEscudo = 10.0f;
     public bool contarTiempo = false;
     public bool armaActiva = false;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
-        if(contarTiempo)
+        if (contarTiempo)
         {
             tiempoEscudo -= Time.deltaTime;
-        }
-        if(tiempoEscudo < 0)
-        {
-            armas[1].SetActive(false);
-            contarTiempo = false;
-            tiempoEscudo = 10.0f;
-        }
-
-
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            if (armaActiva == true)
+            if (tiempoEscudo <= 0)
             {
                 DesactivarArmas();
-            } else
-            {
-                ActivarArmas(0);
+                contarTiempo = false;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (armaActiva)
+                DesactivarArmas();
+            else
+                ActivarArmas(0);
+        }
     }
+
     public void ActivarArmas(int numero)
     {
-       if (numero >= 0 && numero < armas.Length && armas[numero] != null)
-    {
-        for (int i = 0; i < armas.Length; i++)
+        if (numero >= 0 && numero < armas.Length && armas[numero] != null)
         {
-            if (armas[i] != null)
+            for (int i = 0; i < armas.Length; i++)
             {
-                armas[i].SetActive(false);
+                if (armas[i] != null)
+                    armas[i].SetActive(i == numero);
             }
-        }
-        
-        if (numero == 1)
-        {
-            contarTiempo = true;
-        }
-        
-        armas[numero].SetActive(true);
-        armaActiva = true;
 
+            if (numero == 1)
+                contarTiempo = true;
+
+            armaActiva = true;
         }
     }
 
-   public void DesactivarArmas()
+    public void DesactivarArmas()
     {
-
-        for(int i = 0; i < armas.Length; i++)
+        foreach (GameObject arma in armas)
         {
-            armaActiva = false;
-            armas[i].SetActive(false);
+            if (arma != null)
+                arma.SetActive(false);
         }
-
+        armaActiva = false;
     }
-
 }
+    

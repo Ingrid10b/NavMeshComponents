@@ -10,7 +10,7 @@ public class Atacar : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy") && !other.gameObject.CompareTag("Ground"))
         {
             Debug.Log("TRIGER");
             if (Time.time - ultimoAtaque >= cooldown)

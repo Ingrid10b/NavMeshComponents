@@ -21,8 +21,6 @@ public class Vida : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        //SliderVida.value = maxHealth;
-
     }
 
     public void TakeDamage(int damage)
@@ -44,6 +42,16 @@ public class Vida : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Apple"))
+        {
+            currentHealth =+15;
+        }
+    }
+
+
+
 }
 
 

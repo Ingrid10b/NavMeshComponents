@@ -12,6 +12,7 @@ TagManager:
   - Cofre
   - floor
   - Espada
+  - Apple
   layers:
   - Default
   - TransparentFX

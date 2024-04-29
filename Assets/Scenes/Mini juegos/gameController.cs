@@ -99,6 +99,7 @@ public class gameController : MonoBehaviour
             int indiceAleatorio = Random.Range(0, objetosAleatorios.Length);
             GameObject objetoAleatorio = objetosAleatorios[indiceAleatorio];
             Instantiate(objetoAleatorio, selectedCofrePosition, Quaternion.identity);
+            objetoAleatorio.SetActive(true);
             PlayerMovement.camaraOff = false;
         }
     }

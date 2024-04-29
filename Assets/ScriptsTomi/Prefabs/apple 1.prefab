@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 3602805428239513177}
   - component: {fileID: 9007011220889687925}
   - component: {fileID: 866822628274844540}
+  - component: {fileID: 746091272580270942}
   m_Layer: 0
   m_Name: apple 1
   m_TagString: Untagged
@@ -206,7 +207,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7706958910192793672}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.0030975, y: 7.0055876, z: 10.312004}
@@ -282,3 +283,17 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &746091272580270942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706958910192793672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab40dd0c8ed533745a4bdea9cffa7ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cogerArmas: {fileID: 0}
+  numeroArma: 0
